@@ -1,25 +1,35 @@
-name: your_app_name  # Replace with your app's name
-description: A new Flutter project.
-
-publish_to: 'none'  # Remove this line if you plan to publish to pub.dev
+name: my_flutter_project
+description: A new Flutter project using Firebase
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"  # Ensure Dart SDK version matches your current SDK
-  
+  sdk: '^3.2.0'  # Ensure that the Dart SDK is compatible with your project
+
 dependencies:
   flutter:
     sdk: flutter
-  firebase_core: ^2.15.0  # Latest version
-  firebase_auth: ^4.3.0   # Example: for Firebase Authentication
-  http: ^0.13.6  # This was already fixed in the previous step
-  cupertino_icons: ^1.0.8  # Downgrade this to 1.0.8 or use the latest compatible version
-  image_picker: ^0.8.6
 
+  # Firebase Core for initializing Firebase
+  firebase_core: ^3.8.1
+
+  # Firebase Authentication (if you're using Firebase Auth)
+  firebase_auth: ^5.3.4
+
+  # Firebase Firestore (if you're using Firestore)
+  cloud_firestore: ^5.0.0
+
+  # Firebase Messaging (if you're using push notifications)
+  firebase_messaging: ^15.1.6
+
+  # Other Firebase packages you might need
+  # For example, Firebase Storage or Firebase Analytics
+  firebase_storage: ^12.3.7
+  firebase_analytics: ^11.3.6
+
+  # For generating Firebase options (firebase_options.dart)
+  flutterfire_cli: ^1.0.0  # Example, replace with latest version
 
 dev_dependencies:
-  flutter_lints: ^2.0.0
-
-flutter:
-  uses-material-design: true
+  flutter_test:
+    sdk: flutter
